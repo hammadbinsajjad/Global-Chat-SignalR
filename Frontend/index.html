@@ -27,40 +27,52 @@
 </head>
 
 <body class="pixel-font fs-1">
+    <!-- Header -->
     <div class="d-grid justify-content-center align-items-center text-center text-white bg-dark pt-2">
         <h1>
-            <span class="text-info"><</span> Global Chat <span class="text-info">/></span>
+            <span class="text-info"> < </span> Global Pixel Chat <span class="text-info">/></span>
         </h1>
         <br />
         <p class="fs-2">
-            Chat with anyone or everyone on the globe together.
+            Chat with anyone/everyone on the globe together in pixels
         </p>
     </div>
+
+    <!-- User Regisration Section -->
     <div id="registration" class="d-flex align-items-center justify-content-center text-center align-bottom">
         <div class="card registration-card border border-5 border-info  col-lg-3 col-sm-6">
             <div class="card-body">
-              <h1 class="card-title text-white fs-2">Register Yourself</h1>
-              <form id="registration-form">
-                <label for="user-name" class="text-white fs-3">Username:</label>
-                <input type="text" placeholder="Enter your username" id="user-name" class="form-control fs-4"/>
-                <input type="submit" value="Enter" id="registration-submission-button" class="btn btn-success btn-lg mt-2 fs-4"/>
-            </form>
+                <h1 class="card-title text-white fs-2">Register Yourself</h1>
+                <form id="registration-form">
+                    <label for="user-name" class="text-white fs-3">Username:</label>
+                    <input type="text" placeholder="Enter your username" id="user-name" class="form-control fs-4" />
+                    <input type="submit" value="Enter" id="registration-submission-button"
+                        class="btn btn-success btn-lg mt-2 fs-4" />
+                </form>
             </div>
-          </div>
-    </div>
-    <div id="messaging">
-        <div id="messages-area">
-            <textarea id="messages">
-            </textarea>
         </div>
-        <h2>
-            You are messaging as <strong id="username-display">username</strong>
-        </h2>
-        <input type="text" id="new-message" placeholder="Write message here">
-        <button id="new-message-button">Enter</button>
-        <button id="leave-button">
-            Leave
-        </button>
+    </div>
+
+    <!-- Messages section-->
+    <div id="messaging-area" class="d-none">
+        <div class="d-flex justify-content-center align-items-end mt-3">
+            <div class="col-lg-8 col-sm-9 col-11">
+                <button id="leave-button" class="btn btn-danger">Leave Chat</button>
+            </div>
+        </div>
+        <div id="messaging" class="d-flex justify-content-center align-items-top">
+            <div id="all-messages"
+                class="col-lg-8 col-sm-9 col-11 bg-dark fs-4 text-left border border-5 border-bottom-0 border-info">
+            </div>
+        </div>
+        <div class="d-flex justify-content-evenly">
+            <div class="col-lg-8 col-sm-9 col-11 border border-5 border-info border-top-0 d-flex">
+                <input type="text" placeholder="Write message here" id="new-message" class="col-md-10 col-9 fs-3" />
+                <div class="col-md-2 col-3">
+                    <button id="enter-button" class="w-100 h-100 btn btn-outline-primary fs-3 mb-1">Enter</button>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 

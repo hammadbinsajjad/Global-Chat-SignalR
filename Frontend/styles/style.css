@@ -25,3 +25,21 @@ body {
 .pixel-font {
     font-family: "GohuFont Nerd Font";
 }
+
+#messaging {
+    height: calc(100vh - 20rem);
+}
+
+#leave-button {
+    float: right;
+}
+
+#enter-button {
+    background-color: blue;
+    color: antiquewhite;
+}
+
+#enter-button:hover {
+    background-color: yellow;
+    color: black;
+}
