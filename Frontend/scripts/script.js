@@ -19,14 +19,12 @@ let user = null;
 // Handle the submission of the registration and take user to the messaging area
 const reg_form = document.getElementById("registration-form");
 reg_form.onsubmit = (e) => {
-    user = document.getElementById("user-name").value;
     e.preventDefault();
+    user = document.getElementById("user-name").value;
 
     connection = new signalR.HubConnectionBuilder()
         .withUrl("https://localhost:7027/chat")
         .build();
-    registration_area.style.display = "none";
-    messaging_area.style.display = "block";
 
 
     connection.on("ReceiveMessage", (user, message) => {
@@ -44,6 +42,9 @@ reg_form.onsubmit = (e) => {
         .catch((err) => {
             return console.error(err.toString());
         })
+
+    registration_area.style.display = "none";
+    messaging_area.style.display = "block";
 }
 
 
