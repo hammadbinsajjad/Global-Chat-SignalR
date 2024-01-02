@@ -23,7 +23,7 @@ reg_form.onsubmit = (e) => {
     current_color = colors[Math.floor(Math.random() * colors.length)];
 
     connection = new signalR.HubConnectionBuilder()
-        .withUrl("https://localhost:7027/chat")
+        .withUrl("https://global-pixel-chat-app.azurewebsites.net/chat")
         .build();
 
 
