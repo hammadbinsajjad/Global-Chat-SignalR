@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="./scripts/script.js" defer></script>
+
+    <title>Global Chat</title>
+</head>
+<body>
+    <h1>
+        Global Chat
+    </h1>
+    <p>
+        Chat with anyone or everyone on the globe together.
+    </p>
+    <div id="registration">
+        <h2>
+            Register yourself
+        </h2>
+        <form id="registration-form">
+            <input type="text" placeholder="Enter your nickname" id="user-name"/>
+            <input type="submit" value="Enter" id="registration-submission-button" />
+        </form>
+    </div>
+    <div id="messaging">
+        <div id="messages-area">
+            <textarea id="messages">
+            </textarea>
+        </div>
+        <h2>
+            You are messaging as <strong id="username-display">username</strong>
+        </h2>
+        <input type="text" id="new-message" placeholder="Write message here">
+        <button id="new-message-button">Enter</button>
+        <button id="leave-button">
+            Leave
+        </button>
+    </div>
+</body>
+</html>
