@@ -22,13 +22,18 @@ reg_form.onsubmit = (e) => {
     current_user = document.getElementById("user-name").value;
     current_color = colors[Math.floor(Math.random() * colors.length)];
 
+    const messages = document.getElementById("all-messages");
+    while (messages.firstChild) {
+        messages.removeChild(messages.firstChild);
+    }
+
     connection = new signalR.HubConnectionBuilder()
         .withUrl("https://global-pixel-chat-app.azurewebsites.net/chat")
         .build();
 
 
     connection.on("ReceiveMessage", (user, message, color) => {
-        const messages = document.getElementById("all-messages")
+        
 
         if (user == current_user) {
             user = "You";
@@ -91,6 +96,6 @@ leave_button.onclick = () => {
     registration_area.classList.remove("d-none");
     messaging_area.classList.add("d-none");
 
-    if (!connection)
+    if (connection)
         connection.stop();
 }
