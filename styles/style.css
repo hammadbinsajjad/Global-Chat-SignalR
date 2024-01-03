@@ -43,3 +43,7 @@ body {
     background-color: yellow;
     color: black;
 }
+
+#all-messages {
+    overflow-y: scroll;
+}
