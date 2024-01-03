@@ -52,6 +52,8 @@ reg_form.onsubmit = (e) => {
         received_message.appendChild(sender_message);
 
         messages.appendChild(received_message);
+
+        messages.scrollTop = messages.scrollHeight;
     })
 
     connection.start()
